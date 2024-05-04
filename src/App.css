@@ -63,7 +63,7 @@
   height: 29rem;
   width: 30rem;
   background-color: rgba(11, 10, 10, 0.532);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(.5px);
   transition: .4s ease-in;
   border-radius: 50px;
   margin-left: 44.5vh;
@@ -107,7 +107,7 @@
   letter-spacing: 3px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
-  width: 55%;
+  width: 59%;
   transition: .3s ease-in-out;
   align-self: center;
   color: white
