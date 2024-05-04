@@ -7,6 +7,7 @@ function NavComponent() {
       <nav>
         <a href="">Home</a>
         <a href="">About</a>
+        <a href="">Gallery</a>
         <a href="">Contact</a>
         <a href="">Register</a>
       </nav>
