@@ -4,7 +4,7 @@ import "../App.css";
 function Button() {
   return (
     <div>
-      <button className="register-button">Register</button>
+      <button className="register-button">Log in</button>
     </div>
   );
 }
