@@ -3,13 +3,6 @@ import { useState } from "react";
 
 function Input() {
   const [email, setEmail] = useState("");
-  //   const [pass, setPass] = useState("");
-
-  //   function handleClick(e) {
-  //     e.preventDefault();
-  //     const data = e.target.value;
-  //     console.log(data);
-  //   }
   return (
     <div className="form-container">
       <form action="submit">

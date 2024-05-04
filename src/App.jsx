@@ -4,25 +4,35 @@ import Input from "./components/Input.jsx";
 import HeaderComponent from "./components/HeaderComponent.jsx";
 import ImageGrid from "./components/ImageGrid.jsx";
 import NavComponent from "./components/NavComponent.jsx";
-import RegisterButton from "./components/RegisterButton.jsx";
-
+import Button from "./components/RegisterButton.jsx";
 function App() {
   return (
-    <div>
-      <div></div>
-      <div className="overlay">
-        <NavComponent />
+    <div className="all-container">
+      <div>
+        <div className="nav-container">
+          {" "}
+          <nav>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+              <li>Login/Register</li>
+            </ul>
+          </nav>
+        </div>
+        <h1 className="main-heading">Copy&copy;at</h1>
 
-        <HeaderComponent />
-        <div className="form-overlay">
-          <Input />
-          <RegisterButton />
-          <a href=""></a>
-          <a href=""></a>
-          <a href=""></a>
+        <div className="overlay">
+          <h3>Login</h3>
+          <div>
+            <Input />
+          </div>
+          <Button />
         </div>
       </div>
-      <ImageGrid />
+      <div>
+        <section>{/* <Card /> */}</section>
+      </div>
     </div>
   );
 }

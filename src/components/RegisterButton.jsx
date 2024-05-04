@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-function RegisterButton() {
+function Button() {
   return (
     <div>
       <button className="register-button">Register</button>
@@ -9,4 +9,4 @@ function RegisterButton() {
   );
 }
 
-export default RegisterButton;
+export default Button;
