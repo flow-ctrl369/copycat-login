@@ -11,11 +11,9 @@ function Input() {
         <input placeholder="Enter your email" id="email" type="email" />
         <label htmlFor="">Password:</label>
         <input placeholder="Enter your password" id="pass" type="password" />
-        {/* <p htmlFor="">forgot your password?</p> */}
         <p>
-          <a href="">Forgot your password?</a>
+          <a>Forgot your password?</a>
         </p>
-        {/* <button>Click</button> */}
       </form>
     </div>
   );

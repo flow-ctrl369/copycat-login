@@ -21,11 +21,6 @@ a {
   text-decoration: inherit;
   transition: .3s ease-in-out;
 }
-a:hover {
-  cursor: pointer;
-      color: rgb(253, 40, 182);
-}
-
 body {
           background-image: url('./assets/starrynight2.png');      background-position: absolute;
       background-attachment: fixed;
