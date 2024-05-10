@@ -2,14 +2,13 @@ import React from "react";
 import { useState } from "react";
 import "../App.css";
 
-function Input() {
-  const [email, setEmail] = useState("");
+function InputSignIn({ input1, input2 }) {
   return (
     <div className="form-container">
       <form action="submit">
-        <label>Email:</label>
+        <label>{input1}</label>
         <input placeholder="Enter your email" id="email" type="email" />
-        <label htmlFor="">Password:</label>
+        <label>{input2}</label>
         <input placeholder="Enter your password" id="pass" type="password" />
         <p>
           <a>Forgot your password?</a>
@@ -19,4 +18,4 @@ function Input() {
   );
 }
 
-export default Input;
+export default InputSignIn;

@@ -1,16 +1,26 @@
 import { useState } from "react";
 import "./App.css";
 import logo from "./assets/react.svg";
-import Input from "./components/Input.jsx";
+import InputSignIn from "./components/InputSignIn.jsx";
+import InputRegister from "./components/InputRegister.jsx";
 import HeaderComponent from "./components/HeaderComponent.jsx";
 import ImageGrid from "./components/ImageGrid.jsx";
 import NavComponent from "./components/NavComponent.jsx";
 import Button from "./components/RegisterButton.jsx";
 import Content from "./components//Content.jsx";
 import RegisterModal from "./components/RegisterModal.jsx";
+import ImageUpload from "./components/ImageUpload.jsx";
 
 function App() {
   const [isRegister, setIsRegister] = useState(false);
+
+  function toggleDisplay() {
+    if (!isRegister) {
+      setIsRegister(true);
+    } else if (isRegister) {
+      setIsRegister(false);
+    }
+  }
 
   return (
     <>
@@ -18,13 +28,39 @@ function App() {
         <NavComponent />
       </div>
       <div className="all-container">
-        <h1 className="main-heading">Copy&copy;hat</h1>
+        <div className="main-heading-container">
+          <h3 className="main-heading">
+            Copy<span className="copyright">&copy;</span>hat
+          </h3>
+        </div>
 
         <div className="overlay">
-          {!isRegister ? <h3>Sign In</h3> : <RegisterModal />}
+          {!isRegister ? (
+            <div>
+              <h3>Sign In</h3>
+              <InputSignIn input1="Email" input2="Password" />
+              <Button text="Log In" />
+            </div>
+          ) : (
+            <div>
+              <h3>Register</h3>
+              <InputRegister
+                input1="Name"
+                input2="Password"
+                input3="Confirm Password"
+              />
+              <Button text="Sign Up" />
+              {/* <ImageUpload /> */}
+            </div>
+          )}
 
-          <Input />
-          <Button />
+          <h5>
+            {isRegister ? (
+              <a onClick={toggleDisplay}>Log In</a>
+            ) : (
+              <a onClick={toggleDisplay}>Sign Up</a>
+            )}
+          </h5>
         </div>
 
         {/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */}
@@ -32,5 +68,5 @@ function App() {
     </>
   );
 }
-
+// Move the export statement outside of the App function
 export default App;

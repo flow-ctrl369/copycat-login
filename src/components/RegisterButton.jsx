@@ -1,10 +1,10 @@
 import React from "react";
 import "../App.css";
 
-function Button() {
+function Button({ text }) {
   return (
     <div>
-      <button className="register-button">Log in</button>
+      <button className="register-button"> {text}</button>
     </div>
   );
 }
